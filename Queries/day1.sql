@@ -197,3 +197,6 @@ WHERE FIRST_NAME LIKE '%a'  ;  -- 16 ROWS
 SELECT FIRST_NAME
 FROM EMPLOYEES
 WHERE FIRST_NAME LIKE '%a%'  ;  -- 16 ROWS
+--% (0 or more char) a( letter a) % (0 or more char) = contains logic.
+-- You can use % more than one time wherever and when needed
+-- to represent 0 or more characters
