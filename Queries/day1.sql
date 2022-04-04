@@ -71,6 +71,36 @@ SELECT FIRST_NAME, LAST_NAME, SALARY
 FROM EMPLOYEES
 WHERE SALARY = 11000 ;
 
+-- Display the Employee FIRST_NAME, LAST_NAME,SALARY
+-- for the employee with SALARY 4800 and FIRST_NAME David
+
+-- LOGICAL AND
+SELECT FIRST_NAME, LAST_NAME, SALARY
+FROM EMPLOYEES
+WHERE FIRST_NAME = 'David' AND SALARY = 4800 ;
+
+-- Display the Employee FIRST_NAME, LAST_NAME,SALARY
+-- for the employee with SALARY 4800 OR FIRST_NAME David
+-- LOGICAL OR
+SELECT FIRST_NAME, LAST_NAME, SALARY
+FROM EMPLOYEES
+WHERE FIRST_NAME = 'David' OR SALARY = 4800 ;
+
+-- Display the employees that make more than 5000 and less than 12000
+SELECT * FROM EMPLOYEES
+WHERE SALARY>5000 AND SALARY<12000 ; -- 49
+
+-- Display the employees that have JOB_ID of
+                                    -- AD_VP
+                                    -- AD_ASST
+                                    -- FI_ACCOUNT
+                                    -- AC_ACCOUNT
+SELECT * FROM EMPLOYEES
+WHERE JOB_ID = 'AD_VP'
+    OR  JOB_ID = 'AD_ASST'
+    OR  JOB_ID = 'FI_ACCOUNT'
+    OR  JOB_ID = 'AC_ACCOUNT' ;
+
 
 
 
