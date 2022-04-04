@@ -6,7 +6,7 @@
  */
 -- each query you write known as sql SELECT statement
 -- * means all , here it means all columns
--- from sometable that exist in the database
+-- from TableName that exist in the database
 -- Just like Java ,
 -- SQL Statements end in semi-colon ; and it's mandatory
 SELECT * FROM REGIONS ;
