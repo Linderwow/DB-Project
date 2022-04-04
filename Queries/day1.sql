@@ -90,17 +90,59 @@ WHERE FIRST_NAME = 'David' OR SALARY = 4800 ;
 SELECT * FROM EMPLOYEES
 WHERE SALARY>5000 AND SALARY<12000 ; -- 49
 
+
+-- RANGE CHECKING IS MUCH SIMPLER IN SQL USING
+-- BETWEEN ..... AND
+-- IS SAME AS  COLUMN_VALUE>= lowerLimit AND COLUMN_VALUE <= UpperLimit
+-- Above query can be much simpler and more readable as below
+SELECT * FROM EMPLOYEES
+WHERE SALARY BETWEEN 5000 AND 12000 ;
+
+
+
+
 -- Display the employees that have JOB_ID of
                                     -- AD_VP
                                     -- AD_ASST
                                     -- FI_ACCOUNT
                                     -- AC_ACCOUNT
-SELECT * FROM EMPLOYEES
+SELECT FIRST_NAME, JOB_ID FROM EMPLOYEES
 WHERE JOB_ID = 'AD_VP'
     OR  JOB_ID = 'AD_ASST'
     OR  JOB_ID = 'FI_ACCOUNT'
     OR  JOB_ID = 'AC_ACCOUNT' ;
 
+-- USING KEYWORD IN for multiple possible value of same column in condition
+SELECT FIRST_NAME, JOB_ID
+FROM EMPLOYEES
+WHERE JOB_ID IN ('AD_VP', 'AD_ASST', 'FI_ACCOUNT', 'AC_ACCOUNT') ;
+
+
+-- HOW TO SAY NOT IN SQL
+-- for equality check !=  <>  ,
+   --- FIND OUT ALL REGIONS EXPECT THE REGION WITH REGION_ID OF 1
+SELECT * FROM REGIONS
+WHERE REGION_ID <> 1 ;
+--WHERE REGION_ID != 1 ;
+
+--- FIND OUT ALL REGIONS EXPECT THE REGION WITH REGION_NAME OF Americas
+SELECT * FROM REGIONS
+WHERE REGION_NAME <> 'Americas' ;
+
+-- for BETWEEN AND --> NOT BETWEEN .. AND
+
+-- Display the employees that DOES NOT make
+-- more than 5000 and less than 12000
+SELECT FIRST_NAME, SALARY
+FROM EMPLOYEES
+WHERE SALARY NOT BETWEEN 5000 AND 12000;
+
+-- for IN  ---> NOT IN
+-- Display the employees that have JOB_ID
+-- IS NOT ONE OF THESE AD_VP , AD_ASST, FI_ACCOUNT , AC_ACCOUNT
+SELECT FIRST_NAME, JOB_ID
+FROM EMPLOYEES
+WHERE JOB_ID NOT IN ('AD_VP','AD_ASST','FI_ACCOUNT','AC_ACCOUNT')
 
 
 
