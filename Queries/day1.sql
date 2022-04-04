@@ -39,5 +39,38 @@ TASK : SELECT SPECIFIC COLUMNS FROM OTHER TABLES
 TO GET YOURSELF FAMILIAR WITH HR DATABASE
 */
 
+/**
+  Only Getting Unique value from the result
+  for example, only get unique first name from employees table
+ */
+
+SELECT DISTINCT FIRST_NAME
+FROM EMPLOYEES ;  -- 91 ROWS
+
+-- Get only unique last names
+SELECT DISTINCT LAST_NAME
+FROM EMPLOYEES ;  -- 102 ROWS
+
+-- This is looking for people with unique first name lastname , full name
+SELECT DISTINCT FIRST_NAME, LAST_NAME
+FROM EMPLOYEES ;
+
+
+--RESTRICTING ROWS IN THE RESULT USING WHERE CLAUSE
+-- COMPARISON OPERATORS :  = , > >= , < , <= , != , <>
+-- LOGICAL OPERATORS :  AND OR
+
+-- Display the Employee information for the employee with first_name Ellen
+-- IN SQL We use single quote for String.
+SELECT * FROM EMPLOYEES
+WHERE FIRST_NAME = 'Ellen' ;  -- Ellen != ellen != ELLEN , values are case sensitive
+
+-- Display the Employee FIRST_NAME, LAST_NAME,SALARY
+-- for the employee with SALARY 11000
+SELECT FIRST_NAME, LAST_NAME, SALARY
+FROM EMPLOYEES
+WHERE SALARY = 11000 ;
+
+
 
 
