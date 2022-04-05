@@ -23,7 +23,7 @@
             Tj , TD , Ta , T! , TV , T2
       '_a_' -- starts with any one character, followed by a
              and followed by any one character
-            Dad , Man  , Fat, Tab , Gap , Mad
+            Dad , Man , Fat, Tab , Gap , Mad
  */
 
 SELECT FIRST_NAME FROM EMPLOYEES
@@ -39,5 +39,36 @@ WHERE FIRST_NAME LIKE '_a_' ; -- 1
 SELECT PHONE_NUMBER FROM EMPLOYEES
 -- WHERE PHONE_NUMBER LIKE '515%'  ; --Starts with 515 -- 21
 WHERE PHONE_NUMBER LIKE '%.121.%'  ; --contains with 121 --
+
+
+-- YOU CAN OPTIONALLY GIVE AN ALIAS( NICKNAME) FOR YOUR COLUMN
+-- TO CHANGE THE RESULTING COLUMN NAME (ONLY CHANGING DISPLAY NOT ACTUALLY CHANGING IN DATABASE )
+-- USING THE KEYWORD AS RIGHT AFTER COLUMN NAME
+-- and PROVIDE NICKNAME Either without " " if single word
+-- and USE "" IF MORE THAN ONE WORD   AS "MORE THAN ONE"
+-- Display all FIRST_NAME , SALARY in Employees table
+-- modify the column name for Salary in result to Money
+
+SELECT FIRST_NAME , SALARY AS MONEY
+FROM EMPLOYEES ;
+
+-- Display all FIRST_NAME , LAST_NAME in Employees table
+-- modify the column name for AS BELOW
+-- FIRST_NAME -> GIVEN_NAME    LAST_NAME --> FAMILY_NAME
+SELECT FIRST_NAME AS GIVEN_NAME , LAST_NAME AS FAMILY_NAME
+FROM EMPLOYEES ;
+-- Display all FIRST_NAME , LAST_NAME in Employees table
+-- modify the column name for AS BELOW
+-- FIRST_NAME -> GIVEN NAME    LAST_NAME --> FAMILY NAME
+SELECT FIRST_NAME AS "GIVEN NAME" , LAST_NAME AS "FAMILY NAME"
+FROM EMPLOYEES ;
+
+
+-- CONCATENATION IN SQL USE DOUBLE PIPE || (THIS IS NOT OR )
+-- DISPLAY FIRST_NAME , LAST_NAME , FULL_NAME FOR EMPLOYEE
+
+SELECT FIRST_NAME , LAST_NAME , FIRST_NAME || ' ' ||  LAST_NAME
+FROM EMPLOYEES ;
+
 
 
