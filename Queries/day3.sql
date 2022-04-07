@@ -29,9 +29,24 @@ GROUP BY FIRST_NAME
 HAVING COUNT(*) > 1
 ;
 
+------ SQL JOIN ------
+--- IS USED TO GET DATA FROM 2 OR MORE TABLES THAT RELATED TO EACH OTEHR
+-- PRIMARY KEY AND FOREIGN KEY RELATIONSHIP
+
+--- INNER JOIN , LEFT OUTER JOIN , RIGHT OUTER JOIN , FULL OUTER JOIN
 
 
+SELECT COUNTRIES.COUNTRY_NAME , REGIONS.REGION_NAME
+FROM COUNTRIES
+INNER JOIN REGIONS ON COUNTRIES.REGION_ID = REGIONS.REGION_ID ;
 
+-- we can use alias for table to make above query slightly more readable
+-- nicknames are followed by space and the letter or word
+-- you can use nickname to select the columns
+-- just like you did in java obj.VariableName
+SELECT c.COUNTRY_NAME , r.REGION_NAME
+FROM COUNTRIES c
+INNER JOIN REGIONS r ON c.REGION_ID = r.REGION_ID ;
 
 
 
