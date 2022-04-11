@@ -1,3 +1,6 @@
+-- HIGHLIGHT ALL AND CLICK RUN BUTTON
+-- IT WILL RUN FOR FEW MINUTES
+-- ONLY RUN ONCE
 --------------------------------------------------------
 --  File created - Monday-April-11-2022
 --------------------------------------------------------
@@ -123,9 +126,8 @@ CREATE TABLE "HR"."SUPPLIERS"
     STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
     PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
     TABLESPACE "USERS" ;
-
--- --REM INSERTING into HR.AGENTS
--- --SET DEFINE OFF;
+--INSERTING into HR.AGENTS
+--SET DEFINE OFF;
 Insert into HR.AGENTS (EMPLOYEEID,LASTNAME,FIRSTNAME,BIRTHDATE,PHOTO,NOTES) values (1,'Davolio','Nancy',to_date('08-DEC-68','DD-MON-RR'),'EmpID1.pic','Education includes a BA in psychology from Colorado State University. She also completed (The Art of the Cold Call). Nancy is a member of ''Toastmasters International''.');
 Insert into HR.AGENTS (EMPLOYEEID,LASTNAME,FIRSTNAME,BIRTHDATE,PHOTO,NOTES) values (2,'Fuller','Andrew',to_date('19-FEB-52','DD-MON-RR'),'EmpID2.pic','Andrew received his BTS commercial and a Ph.D. in international marketing from the University of Dallas. He is fluent in French and Italian and reads German. He joined the company as a sales representative, was promoted to sales manager and was then named vice president of sales. Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.');
 Insert into HR.AGENTS (EMPLOYEEID,LASTNAME,FIRSTNAME,BIRTHDATE,PHOTO,NOTES) values (3,'Leverling','Janet',to_date('30-AUG-63','DD-MON-RR'),'EmpID3.pic','Janet has a BS degree in chemistry from Boston College). She has also completed a certificate program in food retailing management. Janet was hired as a sales associate and was promoted to sales representative.');
@@ -136,7 +138,7 @@ Insert into HR.AGENTS (EMPLOYEEID,LASTNAME,FIRSTNAME,BIRTHDATE,PHOTO,NOTES) valu
 Insert into HR.AGENTS (EMPLOYEEID,LASTNAME,FIRSTNAME,BIRTHDATE,PHOTO,NOTES) values (8,'Callahan','Laura',to_date('09-JAN-58','DD-MON-RR'),'EmpID8.pic','Laura received a BA in psychology from the University of Washington. She has also completed a course in business French. She reads and writes French.');
 Insert into HR.AGENTS (EMPLOYEEID,LASTNAME,FIRSTNAME,BIRTHDATE,PHOTO,NOTES) values (9,'Dodsworth','Anne',to_date('02-JUL-69','DD-MON-RR'),'EmpID9.pic','Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.');
 Insert into HR.AGENTS (EMPLOYEEID,LASTNAME,FIRSTNAME,BIRTHDATE,PHOTO,NOTES) values (10,'West','Adam',to_date('19-SEP-28','DD-MON-RR'),'EmpID10.pic','An old chum.');
---REM INSERTING into HR.CATEGORIES
+--INSERTING into HR.CATEGORIES
 --SET DEFINE OFF;
 Insert into HR.CATEGORIES (CATEGORYID,CATEGORYNAME,DESCRIPTION) values (1,'Beverages','Soft drinks, coffees, teas, beers, and ales');
 Insert into HR.CATEGORIES (CATEGORYID,CATEGORYNAME,DESCRIPTION) values (2,'Condiments','Sweet and savory sauces, relishes, spreads, and seasonings');
@@ -146,8 +148,8 @@ Insert into HR.CATEGORIES (CATEGORYID,CATEGORYNAME,DESCRIPTION) values (5,'Grain
 Insert into HR.CATEGORIES (CATEGORYID,CATEGORYNAME,DESCRIPTION) values (6,'Meat/Poultry','Prepared meats');
 Insert into HR.CATEGORIES (CATEGORYID,CATEGORYNAME,DESCRIPTION) values (7,'Produce','Dried fruit and bean curd');
 Insert into HR.CATEGORIES (CATEGORYID,CATEGORYNAME,DESCRIPTION) values (8,'Seafood','Seaweed and fish');
---REM INSERTING into HR.CUSTOMERS
---SET DEFINE OFF;
+--INSERTING into HR.CUSTOMERS
+-- SET DEFINE OFF;
 Insert into HR.CUSTOMERS (CUSTOMERID,CUSTOMERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY) values (1,'Alfreds Futterkiste','Maria Anders','Obere Str. 57','Berlin','12209','Germany');
 Insert into HR.CUSTOMERS (CUSTOMERID,CUSTOMERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY) values (2,'Ana Trujillo Emparedados y helados','Ana Trujillo','Avda. de la Constitución 2222','México D.F.','5021','Mexico');
 Insert into HR.CUSTOMERS (CUSTOMERID,CUSTOMERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY) values (3,'Antonio Moreno Taquería','Antonio Moreno','Mataderos 2312','México D.F.','5023','Mexico');
@@ -239,8 +241,8 @@ Insert into HR.CUSTOMERS (CUSTOMERID,CUSTOMERNAME,CONTACTNAME,ADDRESS,CITY,POSTA
 Insert into HR.CUSTOMERS (CUSTOMERID,CUSTOMERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY) values (89,'White Clover Markets','Karl Jablonski','305 - 14th Ave. S. Suite 3B','Seattle','98128','USA');
 Insert into HR.CUSTOMERS (CUSTOMERID,CUSTOMERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY) values (90,'Wilman Kala','Matti Karttunen','Keskuskatu 45','Helsinki','21240','Finland');
 Insert into HR.CUSTOMERS (CUSTOMERID,CUSTOMERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY) values (91,'Wolski','Zbyszek','ul. Filtrowa 68','Walla','01-012','Poland');
---REM INSERTING into HR.ORDERDETAILS
---SET DEFINE OFF;
+--INSERTING into HR.ORDERDETAILS
+-- SET DEFINE OFF;
 Insert into HR.ORDERDETAILS (ORDERDETAILID,ORDERID,PRODUCTID,QUANTITY) values (1,10248,11,12);
 Insert into HR.ORDERDETAILS (ORDERDETAILID,ORDERID,PRODUCTID,QUANTITY) values (2,10248,42,10);
 Insert into HR.ORDERDETAILS (ORDERDETAILID,ORDERID,PRODUCTID,QUANTITY) values (3,10248,72,5);
@@ -759,8 +761,8 @@ Insert into HR.ORDERDETAILS (ORDERDETAILID,ORDERID,PRODUCTID,QUANTITY) values (5
 Insert into HR.ORDERDETAILS (ORDERDETAILID,ORDERID,PRODUCTID,QUANTITY) values (516,10442,66,60);
 Insert into HR.ORDERDETAILS (ORDERDETAILID,ORDERID,PRODUCTID,QUANTITY) values (517,10443,11,6);
 Insert into HR.ORDERDETAILS (ORDERDETAILID,ORDERID,PRODUCTID,QUANTITY) values (518,10443,28,12);
---REM INSERTING into HR.ORDERS
---SET DEFINE OFF;
+--INSERTING into HR.ORDERS
+-- SET DEFINE OFF;
 Insert into HR.ORDERS (ORDERID,CUSTOMERID,EMPLOYEEID,ORDERDATE,SHIPPERID) values (10248,90,5,to_date('04-JUL-96','DD-MON-RR'),3);
 Insert into HR.ORDERS (ORDERID,CUSTOMERID,EMPLOYEEID,ORDERDATE,SHIPPERID) values (10249,81,6,to_date('05-JUL-96','DD-MON-RR'),1);
 Insert into HR.ORDERS (ORDERID,CUSTOMERID,EMPLOYEEID,ORDERDATE,SHIPPERID) values (10250,34,4,to_date('08-JUL-96','DD-MON-RR'),2);
@@ -957,8 +959,8 @@ Insert into HR.ORDERS (ORDERID,CUSTOMERID,EMPLOYEEID,ORDERDATE,SHIPPERID) values
 Insert into HR.ORDERS (ORDERID,CUSTOMERID,EMPLOYEEID,ORDERDATE,SHIPPERID) values (10441,55,3,to_date('10-FEB-97','DD-MON-RR'),2);
 Insert into HR.ORDERS (ORDERID,CUSTOMERID,EMPLOYEEID,ORDERDATE,SHIPPERID) values (10442,20,3,to_date('11-FEB-97','DD-MON-RR'),2);
 Insert into HR.ORDERS (ORDERID,CUSTOMERID,EMPLOYEEID,ORDERDATE,SHIPPERID) values (10443,66,8,to_date('12-FEB-97','DD-MON-RR'),1);
---REM INSERTING into HR.PRODUCTS
---SET DEFINE OFF;
+--INSERTING into HR.PRODUCTS
+-- SET DEFINE OFF;
 Insert into HR.PRODUCTS (PRODUCTID,PRODUCTNAME,SUPPLIERID,CATEGORYID,UNIT,PRICE) values (1,'Chais',1,1,'10 boxes x 20 bags',18);
 Insert into HR.PRODUCTS (PRODUCTID,PRODUCTNAME,SUPPLIERID,CATEGORYID,UNIT,PRICE) values (2,'Chang',1,1,'24 - 12 oz bottles',19);
 Insert into HR.PRODUCTS (PRODUCTID,PRODUCTNAME,SUPPLIERID,CATEGORYID,UNIT,PRICE) values (3,'Aniseed Syrup',1,2,'12 - 550 ml bottles',10);
@@ -1036,13 +1038,13 @@ Insert into HR.PRODUCTS (PRODUCTID,PRODUCTNAME,SUPPLIERID,CATEGORYID,UNIT,PRICE)
 Insert into HR.PRODUCTS (PRODUCTID,PRODUCTNAME,SUPPLIERID,CATEGORYID,UNIT,PRICE) values (75,'Rhönbräu Klosterbier',12,1,'24 - 0.5 l bottles',7.75);
 Insert into HR.PRODUCTS (PRODUCTID,PRODUCTNAME,SUPPLIERID,CATEGORYID,UNIT,PRICE) values (76,'Lakkalikööri',23,1,'500 ml',18);
 Insert into HR.PRODUCTS (PRODUCTID,PRODUCTNAME,SUPPLIERID,CATEGORYID,UNIT,PRICE) values (77,'Original Frankfurter grüne Soße',12,2,'12 boxes',13);
---REM INSERTING into HR.SHIPPERS
---SET DEFINE OFF;
+--INSERTING into HR.SHIPPERS
+-- SET DEFINE OFF;
 Insert into HR.SHIPPERS (SHIPPERID,SHIPPERNAME,PHONE) values (1,'Speedy Express','(503) 555-9831');
 Insert into HR.SHIPPERS (SHIPPERID,SHIPPERNAME,PHONE) values (2,'United Package','(503) 555-3199');
 Insert into HR.SHIPPERS (SHIPPERID,SHIPPERNAME,PHONE) values (3,'Federal Shipping','(503) 555-9931');
---REM INSERTING into HR.SUPPLIERS
---SET DEFINE OFF;
+--INSERTING into HR.SUPPLIERS
+-- SET DEFINE OFF;
 Insert into HR.SUPPLIERS (SUPPLIERID,SUPPLIERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY,PHONE) values (1,'Exotic Liquid','Charlotte Cooper','49 Gilbert St.','Londona','EC1 4SD','UK','(171) 555-2222');
 Insert into HR.SUPPLIERS (SUPPLIERID,SUPPLIERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY,PHONE) values (2,'New Orleans Cajun Delights','Shelley Burke','P.O. Box 78934','New Orleans','70117','USA','(100) 555-4822');
 Insert into HR.SUPPLIERS (SUPPLIERID,SUPPLIERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY,PHONE) values (3,'Grandma Kelly''s Homestead','Regina Murphy','707 Oxford Rd.','Ann Arbor','48104','USA','(313) 555-5735');
@@ -1073,10 +1075,10 @@ Insert into HR.SUPPLIERS (SUPPLIERID,SUPPLIERNAME,CONTACTNAME,ADDRESS,CITY,POSTA
 Insert into HR.SUPPLIERS (SUPPLIERID,SUPPLIERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY,PHONE) values (28,'Gai pâturage','Eliane Noz','Bat. B 3, rue des Alpes','Annecy','74000','France','38.76.98.06');
 Insert into HR.SUPPLIERS (SUPPLIERID,SUPPLIERNAME,CONTACTNAME,ADDRESS,CITY,POSTALCODE,COUNTRY,PHONE) values (29,'Forêts d''érables','Chantal Goulet','148 rue Chasseur','Ste-Hyacinthe','J2S 7S8','Canada','(514) 555-2955');
 --------------------------------------------------------
---  DDL for Index SYS_C007530
+--  DDL for Index AGENTS_PK
 --------------------------------------------------------
 
-CREATE UNIQUE INDEX "HR"."SYS_C007530" ON "HR"."AGENTS" ("EMPLOYEEID")
+CREATE UNIQUE INDEX "HR"."AGENTS_PK" ON "HR"."AGENTS" ("EMPLOYEEID")
     PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS
     STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
     PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
@@ -1100,50 +1102,91 @@ CREATE UNIQUE INDEX "HR"."CUSTOMERS_PK" ON "HR"."CUSTOMERS" ("CUSTOMERID")
     PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
     TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C007532
+--  DDL for Index ORDERDETAILS_PK
 --------------------------------------------------------
 
-CREATE UNIQUE INDEX "HR"."SYS_C007532" ON "HR"."ORDERDETAILS" ("ORDERDETAILID")
+CREATE UNIQUE INDEX "HR"."ORDERDETAILS_PK" ON "HR"."ORDERDETAILS" ("ORDERDETAILID")
     PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS
     STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
     PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
     TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C007531
+--  DDL for Index ORDERS_PK
 --------------------------------------------------------
 
-CREATE UNIQUE INDEX "HR"."SYS_C007531" ON "HR"."ORDERS" ("ORDERID")
+CREATE UNIQUE INDEX "HR"."ORDERS_PK" ON "HR"."ORDERS" ("ORDERID")
     PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS
     STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
     PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
     TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C007536
+--  DDL for Index PRODUCTS_PK
 --------------------------------------------------------
 
-CREATE UNIQUE INDEX "HR"."SYS_C007536" ON "HR"."PRODUCTS" ("PRODUCTID")
+CREATE UNIQUE INDEX "HR"."PRODUCTS_PK" ON "HR"."PRODUCTS" ("PRODUCTID")
     PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS
     STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
     PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
     TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C007534
+--  DDL for Index PRODUCTS_PK
 --------------------------------------------------------
 
-CREATE UNIQUE INDEX "HR"."SYS_C007534" ON "HR"."SHIPPERS" ("SHIPPERID")
+CREATE UNIQUE INDEX "HR"."PRODUCTS_PK" ON "HR"."SHIPPERS" ("SHIPPERID")
     PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS
     STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
     PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
     TABLESPACE "USERS" ;
 --------------------------------------------------------
---  DDL for Index SYS_C007535
+--  DDL for Index PRODUCTS_PK
 --------------------------------------------------------
 
-CREATE UNIQUE INDEX "HR"."SYS_C007535" ON "HR"."SUPPLIERS" ("SUPPLIERID")
+CREATE UNIQUE INDEX "HR"."PRODUCTS_PK" ON "HR"."SUPPLIERS" ("SUPPLIERID")
     PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS
     STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
     PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
     TABLESPACE "USERS" ;
+
+--  DDL for Sequence CATEGORIES_SEQ
+--------------------------------------------------------
+
+CREATE SEQUENCE  "HR"."CATEGORIES_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 9 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence CUSTOMERS_SEQ
+--------------------------------------------------------
+
+CREATE SEQUENCE  "HR"."CUSTOMERS_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 92 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence AGENT_SEQ
+--------------------------------------------------------
+
+CREATE SEQUENCE  "HR"."AGENTS_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 11 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence ORDERDETAILS_SEQ
+--------------------------------------------------------
+
+CREATE SEQUENCE  "HR"."ORDERDETAILS_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 519 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence ORDERS_SEQ
+--------------------------------------------------------
+
+CREATE SEQUENCE  "HR"."ORDERS_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 10444 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence PRODUCTS_SEQ
+--------------------------------------------------------
+
+CREATE SEQUENCE  "HR"."PRODUCTS_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 78 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SHIPPERS_SEQ
+--------------------------------------------------------
+
+CREATE SEQUENCE  "HR"."SHIPPERS_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 4 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SUPPLIERS_SEQ
+--------------------------------------------------------
+
+CREATE SEQUENCE  "HR"."SUPPLIERS_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 30 CACHE 20 NOORDER  NOCYCLE ;
+
 --------------------------------------------------------
 --  DDL for Trigger EMPLOYEES_TRG
 --------------------------------------------------------
