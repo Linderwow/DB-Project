@@ -7,6 +7,10 @@
 -- 3. FIND OUT CUSTOMER NAME AND OrderID  Using the Orders and Customers table
 -- 4. FIND OUT CUSTOMER NAME AND OrderID  Using the Orders and Customers table
 -- CONTINUE TO FIND OUT THE EMPLOYEE NAME  USING EmployeeID
+        SELECT o.OrderID , c.CustomerName, e.FIRSTNAME
+        FROM ORDERS o
+         INNER JOIN CUSTOMERS c ON o.CustomerID = c.CustomerID
+         INNER JOIN EMPLOYEES e ON o.EmployeeID = e.EmployeeID
 -- 5. Find out OrderDetailID and ProductName using the OrderDetails table and Products table
 -- they are related by ProductID
 
@@ -16,6 +20,17 @@
 --O3. FIND OUT EMPLOYEE FirstName and Count of ORDER they processed
 -- including those employees did not process any order (Adam)
 --O4. Find out How much each ORDER COST - SUM OF ALL PRODUCT PRICE IN ORDER DETAILS FOR EACH ORDER
+    /**
+      -- FIND OUT HOW MUCH EACH ORDER COST
+    -- EACH ORDER CONSISTS OF MULTIPLE LINE ITEMS CAN BE FOUND IN ORDER DETAILS TABLE
+    -- ONE PRODUCT PRICE IN ORDER DETAIL IS calculated using  QUANNTITY*PRICE(from PRODUCTS table)
+    -- ONCE you find out how much each line items costs , now you can sum them up using SUM
+    -- The question asked for each order , so group by ORDERID
+     */
+    SELECT oe.OrderID , SUM(oe.Quantity * p.Price) AS ORDER_COST
+    FROM OrderDetails oe
+    INNER JOIN Products p ON p.ProductID = oe.ProductID
+    GROUP BY oe.OrderID
 
 ---- PART 1
 
