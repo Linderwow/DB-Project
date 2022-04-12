@@ -19,7 +19,7 @@ public class FlexibleNavigation {
         // we need to create Statement object in below way
         Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         ResultSet rs   = stmt.executeQuery("SELECT * FROM REGIONS") ;
-        /**
+        /*
          * In order to access data in ResultSet object , we need to use cursor navigation methods :
          *
          * next() -move to next row and return true false according to if we have valid row
@@ -42,6 +42,16 @@ public class FlexibleNavigation {
 
         rs.absolute(3) ; // row 3
         System.out.println("rs.absolute(3) : " + rs.getString("REGION_ID") +" "+ rs.getString("REGION_NAME"));
+
+        rs.previous() ; // row 2
+        System.out.println("rs.previous() : " + rs.getString("REGION_ID") +" "+ rs.getString("REGION_NAME"));
+
+        rs.beforeFirst();  // before first location
+//        System.out.println("rs.beforeFirst() : " + rs.getString("REGION_ID") +" "+ rs.getString("REGION_NAME"));
+        rs.next() ; // row 1 ;
+        rs.afterLast(); // now we are at after last location , nothing is here
+        rs.previous() ; // last row , row 4
+        System.out.println("rs.previous() : " + rs.getString("REGION_ID") +" "+ rs.getString("REGION_NAME"));
 
     }
 
