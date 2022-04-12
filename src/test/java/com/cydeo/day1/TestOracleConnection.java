@@ -8,8 +8,8 @@ public class TestOracleConnection {
 
         // Step 1 : Create Connection by providing Connection information
         // this connection jdbc url , also known as connection string
-        // syntax look like this jdbc:DataBaseType:subprotocal:@Host:port:SID
-
+        // syntax look like this jdbc:DataBaseType:subprotocol:@Host:port:SID
+        // PLEASE REPLACE THIS IP WITH YOUR OWN WORKING EC2 SERVER IP!!
         String url = "jdbc:oracle:thin:@54.236.150.168:1521:XE" ;
         String username = "hr" ;
         String password = "hr" ;
