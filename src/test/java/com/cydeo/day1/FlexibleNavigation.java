@@ -29,7 +29,13 @@ public class FlexibleNavigation {
          * beforeFirst() - move to before first location from anywhere
          * afterLast() - move to after last location from anywhere
          * absolute(8) - move to any row by using row number , for example 8 in this case
-         */
+         * And more
+         * * relative(3) - move 3 row down from current row, -3 will move 3 row up from current row
+         * isFirst()  -     check if current row is first row or not
+         * isBeforeFirst() -check if currently at beforeFirst location or not
+         * isLast()   -     check if current row is last row or not
+         * isAfterLast()   -check if currently at AfterLast location or not
+         * */
 
         rs.next() ; // row 1
         System.out.println("rs.next() : "  +  rs.getString("REGION_ID") +" "+ rs.getString("REGION_NAME"));
