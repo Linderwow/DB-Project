@@ -78,6 +78,10 @@ public class SimpleNavigation {
 
         // we are currently at last row and rs.next will return false if called again
         System.out.println("rs.next() = " + rs.next() );
+        // now try to get the cell value ??? NO ! WE ARE AT AFTER LAST ROW
+//        System.out.println("rs.getString(\"REGION_NAME\") = "
+//                + rs.getString("REGION_NAME"));
+
     }
 
 
