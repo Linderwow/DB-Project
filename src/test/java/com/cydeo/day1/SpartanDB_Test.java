@@ -24,6 +24,11 @@ public class SpartanDB_Test {
         Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         ResultSet rs   = stmt.executeQuery("SELECT * FROM SPARTANS") ;
 
+        // This table has SPARTAN_ID, NAME , GENDER , CREATED_AT , UPDATED_AT
+        while( rs.next() ) {
+            System.out.println(rs.getString("SPARTAN_ID") + " " + rs.getString("NAME"));
+        }
+
     }
 
 
