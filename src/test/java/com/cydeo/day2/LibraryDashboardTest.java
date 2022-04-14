@@ -44,7 +44,7 @@ public class LibraryDashboardTest {
         int actualUserCount = 141 ;
 
         // expected result we can get from running this query
-        // SELECT COUNT(*) AS BOOK_COUNT FROM users
+        // SELECT COUNT(*) AS USER_COUNT FROM users
         String url = "jdbc:mysql://34.230.35.214:3306/library2";
         String username = "library2_client";
         String password = "6s2LQQTjBcGFfDhY" ;
