@@ -52,6 +52,11 @@ public class Library2DB_Test {
         System.out.println("rs.getString(\"BOOK_COUNT\") = "
                 + rs.getString("BOOK_COUNT"));
 
+        // Can I not overwrite previous ResultSet object and save it into new ResultSet variable
+        // YES YOU CAN !
+        ResultSet rs2 =  stmt.executeQuery("SELECT * from users") ;
+        // do your thing here
+
     }
 
 
