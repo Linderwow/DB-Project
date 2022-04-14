@@ -48,6 +48,12 @@ public class GettingColumnInformation {
             System.out.println(rsmd.getColumnName(columnIndex));
         }
 
+        // HOMEWORK :
+        // NOW YOU KNOW HOW TO GO THROUGH ALL THE COLUMNS
+        // AND HOW TO GO THROUGH ALL THE ROWS
+        // WRITE A PIECE OF CODE THAT GO THROUGH EACH AND EVERY CELL
+        // AND PRINT OUT IT'S VALUE
+
     }
 
 }
