@@ -36,7 +36,7 @@ public class DB_Util {
     /**
      * Run the sql query provided and return ResultSet object
      * @param sql the query to run
-     * @return ResultSet object  that contains data
+     * @return ResultSet object  that contains data (since we already have all the methods to get exactly what we want ,this method can be void instead)
      */
     public static ResultSet runQuery(String sql){
 
@@ -235,6 +235,14 @@ public class DB_Util {
 
         return getCellValue(1,1) ;
 
+    }
+
+    /**
+     * Get First Cell Value at First row First Column
+     * @return as number
+     */
+    public int getFirstCellAsInt(){
+        return Integer.parseInt(getCellValue(1,1) );
     }
 
     //
