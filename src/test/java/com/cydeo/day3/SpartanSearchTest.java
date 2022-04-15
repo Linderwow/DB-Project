@@ -1,6 +1,8 @@
 package com.cydeo.day3;
 
 import com.cydeo.utility.DB_Util;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -22,6 +24,21 @@ import static org.testng.Assert.assertEquals;
 
 public class SpartanSearchTest {
 
+    @BeforeClass
+    public void setup(){
+        // create connection ONLY ONCE! for all tests in this class
+        String url = "jdbc:oracle:thin:@54.236.150.168:1521:XE" ;
+        String username = "SP" ;
+        String password = "SP" ;
+
+        DB_Util.createConnection(url, username, password);
+    }
+
+    @AfterClass
+    public void teardown(){
+        // tear down the connection only once after all the tests in this class
+        DB_Util.destroy();
+    }
 
     @Test
     public void testSearchByGender(){
@@ -29,27 +46,26 @@ public class SpartanSearchTest {
         // Assuming you already used your awesome webdriver knowledge
         // to get actual result from that total count
         // or by counting the web table row and got below result
-        //
         int actualResultMale   = 48;
         int actualResultFemale = 47;
 
         // now get expected result from Database query
         // For Male :  SELECT COUNT(*) AS COUNT FROM SPARTANS WHERE GENDER = 'Male'
         // For Female :SELECT COUNT(*) AS COUNT FROM SPARTANS WHERE GENDER = 'Female'
-
-        String url = "jdbc:oracle:thin:@54.236.150.168:1521:XE" ;
-        String username = "SP" ;
-        String password = "SP" ;
-
-        DB_Util.createConnection(url, username, password);
         DB_Util.runQuery("SELECT COUNT(*) AS COUNT FROM SPARTANS WHERE GENDER = 'Male'");
         int expectedMaleResult =  Integer.parseInt( DB_Util.getFirstRowFirstColumn() )  ;
-
         // assert
         assertEquals(actualResultMale , expectedMaleResult);
 
+        DB_Util.runQuery("SELECT COUNT(*) AS COUNT FROM SPARTANS WHERE GENDER = 'Female'");
+        int expectedFemaleResult =  Integer.parseInt( DB_Util.getFirstRowFirstColumn() )  ;
+        // assert
+        assertEquals(actualResultFemale, expectedFemaleResult) ;
 
     }
+
+
+
 
 
 }
