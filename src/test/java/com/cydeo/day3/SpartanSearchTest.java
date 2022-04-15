@@ -1,6 +1,9 @@
 package com.cydeo.day3;
 
+import com.cydeo.utility.DB_Util;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 /**
  * Background : on Spartan UI All Data page ,
@@ -23,7 +26,27 @@ public class SpartanSearchTest {
     @Test
     public void testSearchByGender(){
 
+        // Assuming you already used your awesome webdriver knowledge
+        // to get actual result from that total count
+        // or by counting the web table row and got below result
         //
+        int actualResultMale   = 48;
+        int actualResultFemale = 47;
+
+        // now get expected result from Database query
+        // For Male :  SELECT COUNT(*) AS COUNT FROM SPARTAN WHERE GENDER = 'Male'
+        // For Female :SELECT COUNT(*) AS COUNT FROM SPARTAN WHERE GENDER = 'Female'
+
+        String url = "jdbc:oracle:thin:@54.236.150.168:1521:XE" ;
+        String username = "SP" ;
+        String password = "SP" ;
+
+        DB_Util.createConnection(url, username, password);
+        DB_Util.runQuery("SELECT COUNT(*) AS COUNT FROM SPARTAN WHERE GENDER = 'Male'");
+        int expectedMaleResult =  Integer.parseInt( DB_Util.getFirstRowFirstColumn() )  ;
+
+
+
 
     }
 
