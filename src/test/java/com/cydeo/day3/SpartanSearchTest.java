@@ -34,18 +34,19 @@ public class SpartanSearchTest {
         int actualResultFemale = 47;
 
         // now get expected result from Database query
-        // For Male :  SELECT COUNT(*) AS COUNT FROM SPARTAN WHERE GENDER = 'Male'
-        // For Female :SELECT COUNT(*) AS COUNT FROM SPARTAN WHERE GENDER = 'Female'
+        // For Male :  SELECT COUNT(*) AS COUNT FROM SPARTANS WHERE GENDER = 'Male'
+        // For Female :SELECT COUNT(*) AS COUNT FROM SPARTANS WHERE GENDER = 'Female'
 
         String url = "jdbc:oracle:thin:@54.236.150.168:1521:XE" ;
         String username = "SP" ;
         String password = "SP" ;
 
         DB_Util.createConnection(url, username, password);
-        DB_Util.runQuery("SELECT COUNT(*) AS COUNT FROM SPARTAN WHERE GENDER = 'Male'");
+        DB_Util.runQuery("SELECT COUNT(*) AS COUNT FROM SPARTANS WHERE GENDER = 'Male'");
         int expectedMaleResult =  Integer.parseInt( DB_Util.getFirstRowFirstColumn() )  ;
 
-
+        // assert
+        assertEquals(actualResultMale , expectedMaleResult);
 
 
     }
