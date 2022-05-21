@@ -1,6 +1,7 @@
 package com.cydeo.day2;
 
-import com.cydeo.utility.DB_Util;
+
+import com.cydeo.Utility.DB_Util;
 
 public class DB_Util_Practice {
 

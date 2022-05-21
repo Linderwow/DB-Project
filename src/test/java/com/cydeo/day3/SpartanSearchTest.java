@@ -1,6 +1,6 @@
 package com.cydeo.day3;
 
-import com.cydeo.utility.DB_Util;
+import com.cydeo.Utility.DB_Util;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -27,7 +27,7 @@ public class SpartanSearchTest {
     @BeforeClass
     public void setup(){
         // create connection ONLY ONCE! for all tests in this class
-        String url = "jdbc:oracle:thin:@54.236.150.168:1521:XE" ;
+        String url = "jdbc:oracle:thin:@44.202.192.153:1521:XE" ;
         String username = "SP" ;
         String password = "SP" ;
 

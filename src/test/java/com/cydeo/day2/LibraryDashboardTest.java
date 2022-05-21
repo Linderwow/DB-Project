@@ -1,6 +1,6 @@
 package com.cydeo.day2;
 
-import com.cydeo.utility.DB_Util;
+import com.cydeo.Utility.DB_Util;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
